@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  font-family: Nunito Sans, sans-serif;
+  color: #fff;
+}
+@media (max-width: 768px) {
+  .page {
+    background: url('../img/1.png');
+    background-position: -120px 0px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+    margin: 0 auto;
+  }
+  .header {
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    min-height: 40px;
+    padding: 0 16px;
+
+    &__logo {
+      font-size: 20px;
+      font-weight: 800;
+      line-height: 20px;
+      cursor: pointer;
+    }
+
+    &__navigation {
+      display: flex;
+      align-items: center;
+      gap: 31px;
+    }
+
+    &__links {
+      display: none;
+      gap: 31.3px;
+      list-style: none;
+      margin-left: auto;
+    }
+
+    &__link {
+      text-decoration: none;
+      font-size: 15px;
+      color: #fff;
+    }
+
+    &__action-button {
+      min-width: 132px;
+      height: 40px;
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+  }
+  ul {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    padding-inline-start: 40px;
+    unicode-bidi: isolate;
+  }
+  a {
+    background-color: transparent;
+  }
+  .button {
+    min-width: 167px;
+    height: 50px;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 17px;
+    letter-spacing: 1px;
+    color: #fff;
+    border-radius: 6px;
+    border: none;
+    font-family: Nunito Sans, sans-serif;
+    background: linear-gradient(163deg, #ff8e64, #ffe641);
+
+    &_white {
+      min-width: 144px;
+      background: #f8f9fa;
+      color: #282b31;
+    }
+  }
+
+  nav {
+    unicode-bidi: isolate;
+  }
+  .headline {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+
+    &__content {
+      padding: 140px 16px 100px;
+    }
+    &__description {
+      text-align: center;
+
+      &_visible {
+        display: none;
+      }
+    }
+    &__title {
+      font-size: 35px;
+      font-weight: 300;
+      line-height: 50px;
+      letter-spacing: 1px;
+      color: #fff;
+      margin: 10px 0 36px;
+    }
+    &__buttons {
+      justify-content: center;
+      display: flex;
+      gap: 20px;
+    }
+  }
+
+  .content {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+  }
+  img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    margin-right: 12px;
+  }
+  .bold {
+    font-weight: bold;
+  }
+}

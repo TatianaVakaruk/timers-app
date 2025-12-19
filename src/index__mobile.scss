@@ -295,5 +295,51 @@
       margin-right: 5px;
       margin-top: 18px;
     }
+    .timer {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      width: 100%;
+      height: 50px;
+      &__title {
+        font-size: 20px;
+        font-weight: 800;
+        color: #5586f2;
+        width: 130px;
+        text-wrap: nowrap;
+        overflow-x: hidden;
+        text-overflow: ellipsis;
+        cursor: pointer;
+      }
+      &__value {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 117px;
+        height: 50px;
+        border-radius: 6px;
+        font-size: 17px;
+        color: #676c75;
+        margin: 0 4px;
+      }
+      &__toggle-button {
+        background: linear-gradient(135deg, #7956ec, #2fb9f8);
+        border-radius: 50%;
+      }
+      & button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        border: none;
+        cursor: pointer;
+      }
+      &__delete-button {
+        background: linear-gradient(135deg, #f23673, #fca069);
+        border-radius: 6px;
+      }
+    }
   }
 }

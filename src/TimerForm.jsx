@@ -14,6 +14,7 @@ const TimerForm = ({ setItems }) => {
         id: Date.now(),
         text: inputValue,
         seconds: 0,
+        isRunning: false,
       },
     ]);
 

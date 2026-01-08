@@ -4,6 +4,7 @@ import Timer from './Timer.jsx';
 
 const Timers = () => {
   const [items, setItems] = useState([]);
+
   return (
     <section className="timers">
       <h2 className="timers__title">
@@ -18,7 +19,7 @@ const Timers = () => {
       <TimerForm setItems={setItems} />
       <ul className="timers__list">
         {items.map((item) => (
-          <Timer items={items} key={item.id} item={item} setItems={setItems} />
+          <Timer key={item.id} item={item} setItems={setItems} />
         ))}
       </ul>
     </section>

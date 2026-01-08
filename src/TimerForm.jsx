@@ -14,24 +14,12 @@ const TimerForm = ({ setItems }) => {
         id: Date.now(),
         text: inputValue,
         seconds: 0,
-        isRunning: false,
+        isRunning: true,
       },
     ]);
 
     setInputValue('');
   };
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setItems((prev) =>
-        prev.map((item) => ({
-          ...item,
-          seconds: item.seconds + 1,
-        }))
-      );
-    }, 1000);
-    return () => clearInterval(interval);
-  }, []);
 
   return (
     <div className="timers__content">

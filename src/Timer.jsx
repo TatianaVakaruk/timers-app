@@ -9,7 +9,7 @@ const Timer = ({ item, setItems }) => {
   useEffect(() => {
     if (!timer.isRunning) return;
     const interval = setInterval(() => {
-      setTimer((prev) => ({
+      setTimers((prev) => ({
         ...prev,
         seconds: (prev.seconds += 1),
         lastUpdated: new Date(),

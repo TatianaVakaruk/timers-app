@@ -4,7 +4,7 @@ import Timer from './Timer.jsx';
 
 const Timers = () => {
   const [items, setItems] = useState([]);
-  useEffect(() => {
+  const [timers, setTimers] = (useState = () => {
     const saved = localStorage.getItem('timers');
     if (saved) {
       // восстанавливаем lastUpdated и корректируем seconds для запущенных таймеров

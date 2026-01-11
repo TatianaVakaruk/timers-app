@@ -4,8 +4,8 @@ import delete1 from '../img/9.png';
 import toggle1 from '../img/10.png';
 import { setInterval } from 'core-js';
 
-const Timer = ({ item, setItems, setTimers }) => {
-  const [timer, setTimer] = useState(item);
+const Timer = ({ item, setItems }) => {
+  const [timer, setTimers] = useState(item);
   useEffect(() => {
     if (!timer.isRunning) return;
     const interval = setInterval(() => {

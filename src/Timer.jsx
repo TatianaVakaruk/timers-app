@@ -5,6 +5,7 @@ import toggle1 from '../img/10.png';
 import { setInterval } from 'core-js';
 
 const Timer = ({ item, setItems }) => {
+  const [timer, setTimer] = useState(item);
   const [timers, setTimers] = useState(() => {
     const saved = localStorage.getItem('timers');
     if (saved) {

@@ -5,18 +5,26 @@ import toggle1 from '../img/10.png';
 import { setInterval } from 'core-js';
 
 const Timer = ({ item, setItems }) => {
-  const [timer, setTimers] = useState(item);
-  useEffect(() => {
-    if (!timer.isRunning) return;
-    const interval = setInterval(() => {
-      setTimers((prev) => ({
-        ...prev,
-        seconds: (prev.seconds += 1),
-        lastUpdated: new Date(),
-      }));
-    }, 1000);
-    return () => clearInterval(interval);
-  }, [timer.isRunning]);
+  const [timers, setTimers] = useState(() => {
+    const saved = localStorage.getItem('timers');
+    if (saved) {
+      return JSON.parse(saved).map((timer) => {
+        if (timer.isRunning) {
+          const now = new Date();
+          const elapsed = Math.floor(
+            (now - new Date(timer.lastUpdated)) / 1000
+          );
+          return {
+            ...timer,
+            seconds: timer.seconds + elapsed,
+            lastUpdated: now,
+          };
+        }
+        return timer;
+      });
+    }
+    return [];
+  });
   const toggleTimer = (id) => {
     setTimers((prev) =>
       prev.map((timer) =>
@@ -24,7 +32,7 @@ const Timer = ({ item, setItems }) => {
           ? {
               ...timer,
               isRunning: !timer.isRunning,
-              lastUpdated: new Date(),
+              lastUpdated: new Data(),
             }
           : timer
       )
@@ -38,11 +46,11 @@ const Timer = ({ item, setItems }) => {
       .join(':');
   useEffect(() => {
     const handleBeforeUnload = () => {
-      localStorage.setItem('timers', JSON.stringify(timer));
+      localStorage.setItem('timers', JSON.stringify(timers));
     };
     window.addEventListener('beforeunload', handleBeforeUnload);
     return () => window.removeEventListener('beforeunload', handleBeforeUnload);
-  }, [timer]);
+  }, [timers]);
 
   return (
     <li className="timers__forms">

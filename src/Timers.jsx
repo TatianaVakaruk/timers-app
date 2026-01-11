@@ -4,10 +4,9 @@ import Timer from './Timer.jsx';
 
 const Timers = () => {
   const [items, setItems] = useState([]);
-  const [timers, setTimers] = (useState = () => {
+  const [timers, setTimers] = useState(() => {
     const saved = localStorage.getItem('timers');
     if (saved) {
-      // восстанавливаем lastUpdated и корректируем seconds для запущенных таймеров
       return JSON.parse(saved).map((timer) => {
         if (timer.isRunning) {
           const now = new Date();

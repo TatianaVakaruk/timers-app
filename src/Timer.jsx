@@ -9,7 +9,11 @@ const Timer = ({ item, setItems }) => {
   useEffect(() => {
     if (!timer.isRunning) return;
     const interval = setInterval(() => {
-      setTimer((prev) => ({ ...prev, seconds: (prev.seconds += 1) }));
+      setTimer((prev) => ({
+        ...prev,
+        seconds: (prev.seconds += 1),
+        lastUpdated: new Date(),
+      }));
     }, 1000);
     return () => clearInterval(interval);
   }, [timer.isRunning]);
@@ -21,6 +25,13 @@ const Timer = ({ item, setItems }) => {
     [s / 3600, (s % 3600) / 60, s % 60]
       .map((v) => String(Math.floor(v)).padStart(2, '0'))
       .join(':');
+  useEffect(() => {
+    const handleBeforeUnload = () => {
+      localStorage.setItem('timers', JSON.stringify(timer));
+    };
+    window.addEventListener('beforeunload', handleBeforeUnload);
+    return () => window.removeEventListener('beforeunload', handleBeforeUnload);
+  }, [timer]);
 
   return (
     <li className="timers__forms">

@@ -1,9 +1,30 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import TimerForm from './TimerForm.jsx';
 import Timer from './Timer.jsx';
 
 const Timers = () => {
   const [items, setItems] = useState([]);
+  useEffect(() => {
+    const saved = localStorage.getItem('timers');
+    if (saved) {
+      // восстанавливаем lastUpdated и корректируем seconds для запущенных таймеров
+      return JSON.parse(saved).map((timer) => {
+        if (timer.isRunning) {
+          const now = new Date();
+          const elapsed = Math.floor(
+            (now - new Date(timer.lastUpdated)) / 1000
+          );
+          return {
+            ...timer,
+            seconds: timer.seconds + elapsed,
+            lastUpdated: now,
+          };
+        }
+        return timer;
+      });
+    }
+    return [];
+  });
 
   return (
     <section className="timers">

@@ -1,25 +1,21 @@
 import React, { useState, useEffect } from 'react';
-
-const TimerForm = ({ items, setItems }) => {
+import moment from 'moment';
+const TimerForm = ({ setTimers }) => {
   const [inputValue, setInputValue] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    if (!inputValue.trim()) return;
-
-    setItems((prev) => [
-      ...prev,
-      {
-        id: Date.now(),
-        text: inputValue,
-        seconds: 0,
-        isRunning: true,
-        lastUpdated: new Date(),
-      },
-    ]);
-
-    setInputValue('');
+    const newTimer = {
+      id: new Data(),
+      text: inputValue.trim() || `From ${moment().format('HH:mm')}`,
+      seconds: 0,
+      isRunning: true,
+    };
+    setTimers((prevTimers) => {
+      localStorage.setItem('timers', JSON.stringify([...prevTimers, newTimer]));
+      return [...prevTimers, newTimer];
+    });
+    setInputValue = '';
   };
 
   return (

@@ -3,27 +3,13 @@ import TimerForm from './TimerForm.jsx';
 import Timer from './Timer.jsx';
 
 const Timers = () => {
-  const [items, setItems] = useState([]);
-  const [timers, setTimers] = useState(() => {
-    const saved = localStorage.getItem('timers');
-    if (saved) {
-      return JSON.parse(saved).map((timer) => {
-        if (timer.isRunning) {
-          const now = new Date();
-          const elapsed = Math.floor(
-            (now - new Date(timer.lastUpdated)) / 1000
-          );
-          return {
-            ...timer,
-            seconds: timer.seconds + elapsed,
-            lastUpdated: now,
-          };
-        }
-        return timer;
-      });
+  const [timers, setTimers] = useState([]);
+  useEffect(() => {
+    const storedTimers = localStorage.getItem('timers');
+    if (storedTimers) {
+      setTimers(JSON.parse(storedTimers));
     }
-    return [];
-  });
+  }, []);
 
   return (
     <section className="timers">
@@ -36,10 +22,10 @@ const Timers = () => {
         toward the Red Queen. To her surprise, she lost sight of her in a
         moment.
       </p>
-      <TimerForm setItems={setItems} />
+      <TimerForm setTimers={setTimers} />
       <ul className="timers__list">
-        {items.map((item) => (
-          <Timer key={item.id} items={items} item={item} setItems={setItems} />
+        {timers.map((timer) => (
+          <Timer key={timer.id} initialTimer={timer} setTimers={setTimers} />
         ))}
       </ul>
     </section>

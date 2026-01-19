@@ -6,7 +6,7 @@ const TimerForm = ({ setTimers }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const newTimer = {
-      id: new Data(),
+      id: Date.now(),
       text: inputValue.trim() || `From ${moment().format('HH:mm')}`,
       seconds: 0,
       isRunning: true,
@@ -15,7 +15,7 @@ const TimerForm = ({ setTimers }) => {
       localStorage.setItem('timers', JSON.stringify([...prevTimers, newTimer]));
       return [...prevTimers, newTimer];
     });
-    setInputValue = '';
+    setInputValue('');
   };
 
   return (

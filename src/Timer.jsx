@@ -5,11 +5,11 @@ import toggle1 from '../img/10.png';
 import { setInterval } from 'core-js';
 import moment from 'moment';
 
-const getOtherStoredTimers = (id) => {
+const getOtherStoredTimers = (id) =>
   JSON.parse(localStorage.getItem('timers') || []).filter(
     (timer) => timer.id !== id
   );
-};
+
 const Timer = ({ initialTimer, setTimers }) => {
   const [timer, setTimer] = useState(initialTimer);
   const { id, title, seconds, isRunning, lastUpdated } = timer;
@@ -60,7 +60,7 @@ const Timer = ({ initialTimer, setTimers }) => {
   };
   const onDelete = () => {
     localStorage.setItem('timers', JSON.stringify(getOtherStoredTimers(id)));
-    setTimer(getOtherStoredTimers(id));
+    setTimers(getOtherStoredTimers(id));
   };
   const formatTime = (s) =>
     [s / 3600, (s % 3600) / 60, s % 60]

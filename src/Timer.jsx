@@ -7,12 +7,12 @@ import moment from 'moment';
 
 const getOtherStoredTimers = (id) =>
   JSON.parse(localStorage.getItem('timers') || []).filter(
-    (timer) => timer.id !== id
+    (timer) => timer.id !== id,
   );
 
 const Timer = ({ initialTimer, setTimers }) => {
   const [timer, setTimer] = useState(initialTimer);
-  const { id, title, seconds, isRunning, lastUpdated } = timer;
+  const { id, seconds, isRunning, lastUpdated } = timer;
   console.log(seconds);
   useEffect(() => {
     let intervalId = null;
@@ -49,7 +49,7 @@ const Timer = ({ initialTimer, setTimers }) => {
       JSON.stringify([
         ...getOtherStoredTimers(id),
         { ...timer, lastUpdated: moment().toISOString() },
-      ])
+      ]),
     );
   };
   const onToggle = () => {
@@ -68,22 +68,22 @@ const Timer = ({ initialTimer, setTimers }) => {
       .join(':');
 
   return (
-    <li className="timers__forms">
-      <h6 className="timers__forms-title">{timer.text}</h6>
+    <li className="timer">
+      <h6 className="timer__title">{timer.text}</h6>
       <span
         style={
           timer.isRunning
             ? { backgroundColor: 'rgb(231, 232, 234)' }
-            : { backgroundColor: '#ff4876', opacity: 0.15 }
+            : { backgroundColor: '#ff487626' }
         }
-        className="timers__forms-value"
+        className="timer__value"
       >
         {formatTime(timer.seconds)}
       </span>
       <button
         onClick={onToggle}
-        className="timers__forms_toggle-button
-        timers__forms_toggle-button-paused"
+        className="timer__toggle-button
+        timer__toggle-button-paused"
       >
         {timer.isRunning ? (
           <img src={toggle} alt="timer toggle" />
@@ -91,7 +91,7 @@ const Timer = ({ initialTimer, setTimers }) => {
           <img src={toggle1} alt="paused" />
         )}
       </button>
-      <button onClick={onDelete} className="timers__forms_delete-button">
+      <button onClick={onDelete} className="timer__delete-button">
         <img src={delete1} alt="delete" />
       </button>
     </li>

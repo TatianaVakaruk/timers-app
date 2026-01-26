@@ -22,12 +22,14 @@ const Timers = () => {
         toward the Red Queen. To her surprise, she lost sight of her in a
         moment.
       </p>
-      <TimerForm setTimers={setTimers} />
-      <ul className="timers__list">
-        {timers.map((timer) => (
-          <Timer key={timer.id} initialTimer={timer} setTimers={setTimers} />
-        ))}
-      </ul>
+      <div className="timers__content">
+        <TimerForm setTimers={setTimers} />
+        <ul className="timers__list">
+          {timers.map((timer) => (
+            <Timer key={timer.id} initialTimer={timer} setTimers={setTimers} />
+          ))}
+        </ul>
+      </div>
     </section>
   );
 };

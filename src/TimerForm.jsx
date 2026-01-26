@@ -19,7 +19,7 @@ const TimerForm = ({ setTimers }) => {
   };
 
   return (
-    <div className="timers__content">
+    <>
       <form className="timers__form">
         <input
           type="text"
@@ -36,7 +36,7 @@ const TimerForm = ({ setTimers }) => {
         </button>
       </form>
       <span className="timers__line"></span>
-    </div>
+    </>
   );
 };
 

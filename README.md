@@ -1,4 +1,4 @@
-#### [Site link](https://tatianavakaruk.github.io/reqct_first_project/)
+#### [Site link](https://steady-marzipan-ff384b.netlify.app/)
 
 Layout supports all versions
 

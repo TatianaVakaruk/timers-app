@@ -1,4 +1,4 @@
-#### [Site link](https://github.com/TatianaVakaruk/reqct_first_project.git)
+#### [Site link](https://tatianavakaruk.github.io/reqct_first_project/)
 
 Layout supports all versions
 

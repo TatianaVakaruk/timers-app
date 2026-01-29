@@ -1,7 +1,5 @@
 # Timers Project
 
----
-
 #### [Site link](https://astounding-rolypoly-2da51f.netlify.app/)
 
 Layout supports all versions

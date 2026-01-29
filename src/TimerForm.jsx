@@ -3,7 +3,7 @@ import moment from 'moment';
 const TimerForm = ({ setTimers }) => {
   const [inputValue, setInputValue] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = e => {
     e.preventDefault();
     const newTimer = {
       id: Date.now(),
@@ -11,7 +11,7 @@ const TimerForm = ({ setTimers }) => {
       seconds: 0,
       isRunning: true,
     };
-    setTimers((prevTimers) => {
+    setTimers(prevTimers => {
       localStorage.setItem('timers', JSON.stringify([...prevTimers, newTimer]));
       return [...prevTimers, newTimer];
     });
@@ -25,10 +25,10 @@ const TimerForm = ({ setTimers }) => {
           type="text"
           placeholder="Timer Name"
           value={inputValue}
-          onChange={(e) => setInputValue(e.target.value)}
+          onChange={e => setInputValue(e.target.value)}
         />
         <button
-          className="timers__submit-button button1"
+          className="timers__submit-button button__decoration"
           type="submit"
           onClick={handleSubmit}
         >

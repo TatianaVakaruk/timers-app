@@ -5,10 +5,8 @@ import toggle1 from '../img/10.png';
 import { setInterval } from 'core-js';
 import moment from 'moment';
 
-const getOtherStoredTimers = (id) =>
-  JSON.parse(localStorage.getItem('timers') || []).filter(
-    (timer) => timer.id !== id,
-  );
+const getOtherStoredTimers = id =>
+  JSON.parse(localStorage.getItem('timers') || []).filter(timer => timer.id !== id);
 
 const Timer = ({ initialTimer, setTimers }) => {
   const [timer, setTimer] = useState(initialTimer);
@@ -18,14 +16,14 @@ const Timer = ({ initialTimer, setTimers }) => {
     let intervalId = null;
     const passedTime = moment().diff(moment(lastUpdated), 'seconds');
     if (isRunning && passedTime) {
-      setTimer((prevState) => ({
+      setTimer(prevState => ({
         ...prevState,
         seconds: prevState.seconds + passedTime,
       }));
     }
     if (isRunning) {
       intervalId = +setInterval(() => {
-        setTimer((prevState) => ({
+        setTimer(prevState => ({
           ...prevState,
           seconds: prevState.seconds + 1,
         }));
@@ -53,7 +51,7 @@ const Timer = ({ initialTimer, setTimers }) => {
     );
   };
   const onToggle = () => {
-    setTimer((prevTimer) => ({
+    setTimer(prevTimer => ({
       ...prevTimer,
       isRunning: !isRunning,
     }));
@@ -62,10 +60,8 @@ const Timer = ({ initialTimer, setTimers }) => {
     localStorage.setItem('timers', JSON.stringify(getOtherStoredTimers(id)));
     setTimers(getOtherStoredTimers(id));
   };
-  const formatTime = (s) =>
-    [s / 3600, (s % 3600) / 60, s % 60]
-      .map((v) => String(Math.floor(v)).padStart(2, '0'))
-      .join(':');
+  const formatTime = s =>
+    [s / 3600, (s % 3600) / 60, s % 60].map(v => String(Math.floor(v)).padStart(2, '0')).join(':');
 
   return (
     <li className="timer">

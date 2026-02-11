@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
-import toggle from '../img/8.png';
-import delete1 from '../img/9.png';
-import toggle1 from '../img/10.png';
+import pause from '../img/pause.png';
+import del from '../img/delete.png';
+import run from '../img/run.png';
 import { setInterval } from 'core-js';
 import moment from 'moment';
 
@@ -81,14 +81,10 @@ const Timer = ({ initialTimer, setTimers }) => {
         className="timer__toggle-button
         timer__toggle-button-paused"
       >
-        {timer.isRunning ? (
-          <img src={toggle} alt="timer toggle" />
-        ) : (
-          <img src={toggle1} alt="paused" />
-        )}
+        {timer.isRunning ? <img src={pause} alt="timer toggle" /> : <img src={run} alt="paused" />}
       </button>
       <button onClick={onDelete} className="timer__delete-button">
-        <img src={delete1} alt="delete" />
+        <img src={del} alt="delete" />
       </button>
     </li>
   );

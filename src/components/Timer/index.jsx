@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
-import pause from '../img/pause.png';
-import del from '../img/delete.png';
-import run from '../img/run.png';
+import pause from '../../../img/pause.png';
+import del from '../../../img/delete.png';
+import run from '../../../img/run.png';
 import { setInterval } from 'core-js';
 import moment from 'moment';
 

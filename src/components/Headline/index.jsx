@@ -1,6 +1,6 @@
 import React from 'react';
-import logo from '../img/logo.png';
-import photo from '../img/picture.png';
+import logo from '../../../img/logo.png';
+import photo from '../../../img/picture.png';
 
 const Headline = () => {
   return (

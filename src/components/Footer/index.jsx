@@ -1,8 +1,8 @@
 import React from 'react';
-import love from '../img/heart.png';
-import twitter from '../img/twitter.png';
-import facebook from '../img/facebook.png';
-import instagram from '../img/instagram.png';
+import love from '../../../img/heart.png';
+import twitter from '../../../img/twitter.png';
+import facebook from '../../../img/facebook.png';
+import instagram from '../../../img/instagram.png';
 
 const Footer = () => {
   return (

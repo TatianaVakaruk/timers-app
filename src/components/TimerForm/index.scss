@@ -1,0 +1,140 @@
+@import './../../styles/breakpoints.scss';
+@import './../../styles/variables';
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  font-family: $font-stack;
+  color: $white;
+}
+@media (max-width: $breakpoint-md) {
+  .timers__form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    padding: 0 16px;
+  }
+  .timers input {
+    width: 100%;
+    height: 50px;
+    font-size: 17px;
+    border-radius: 6px;
+    border: 1px solid $light-gray;
+    background-color: $dark-white;
+    padding: 2px 20px 0;
+  }
+  .timers__submit-button {
+    min-width: 165px !important;
+    cursor: pointer;
+  }
+  .timers__line {
+    width: 100%;
+    height: 1px;
+    background-color: $light-gray;
+  }
+  .button__decoration {
+    min-width: 167px;
+    height: 50px;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 17px;
+    letter-spacing: 1px;
+    color: $white;
+    border-radius: 6px;
+    border: none;
+    font-family: $font-stack;
+    background: linear-gradient(163deg, $orange, $yellow);
+  }
+}
+@media screen and (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
+  .timers__form {
+    flex-direction: row;
+    gap: 20px;
+    width: auto;
+    unicode-bidi: isolate;
+    background-color: $white;
+
+    input {
+      width: 255px;
+      height: 50px;
+      font-size: 17px;
+      border-radius: 6px;
+      border: 1px solid $light-gray;
+      background-color: $dark-white;
+      padding: 2px 20px 0;
+      margin-right: 20px;
+    }
+    .timers__submit-button {
+      min-width: 165px !important;
+      cursor: pointer;
+    }
+  }
+  .timers__line {
+    width: 100%;
+    height: 1px;
+    background-color: $light-gray;
+  }
+  .button__decoration {
+    min-width: 167px;
+    height: 50px;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 17px;
+    letter-spacing: 1px;
+    color: $white;
+    border-radius: 6px;
+    border: none;
+    font-family: $font-stack;
+    background: linear-gradient(163deg, $orange, $yellow);
+  }
+}
+@media screen and (min-width: $breakpoint-xl) {
+  .timers__form {
+    flex-direction: row;
+    gap: 20px;
+    width: auto;
+    unicode-bidi: isolate;
+    background-color: $white;
+
+    input {
+      width: 255px;
+      height: 50px;
+      font-size: 17px;
+      border-radius: 6px;
+      border: 1px solid $light-gray;
+      background-color: $dark-white;
+      padding: 2px 20px 0;
+      margin-right: 20px;
+      width: 305px;
+    }
+    .timers__submit-button {
+      min-width: 165px !important;
+      cursor: pointer;
+    }
+  }
+  .timers__line {
+    width: 100%;
+    height: 1px;
+    background-color: $light-gray;
+  }
+  .button__decoration {
+    min-width: 167px;
+    height: 50px;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 17px;
+    letter-spacing: 1px;
+    color: $white;
+    border-radius: 6px;
+    border: none;
+    font-family: $font-stack;
+    background: linear-gradient(163deg, $orange, $yellow);
+  }
+}

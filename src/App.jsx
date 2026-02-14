@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Header from './Header.jsx';
-import Headline from './Headline.jsx';
-import Timers from './Timers.jsx';
-import Footer from './Footer.jsx';
+import Header from './components/Header/index.jsx';
+import Headline from './components/Headline/index.jsx';
+import Timers from './components/Timers/index.jsx';
+import Footer from './components/Footer/index.jsx';
 
 class App extends Component {
   render() {

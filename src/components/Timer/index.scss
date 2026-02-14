@@ -1,0 +1,196 @@
+@import './../../styles/variables';
+@import './../../styles/breakpoints.scss';
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  font-family: $font-stack;
+  color: $white;
+}
+@media (max-width: $breakpoint-md) {
+  .timer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    width: 100%;
+    height: 50px;
+
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      height: 50px;
+      border: none;
+      margin: auto;
+    }
+  }
+  .timer__title {
+    font-size: 20px;
+    font-weight: 800;
+    color: $super-dark-gray;
+    width: 100px;
+    height: 50px;
+    text-wrap: nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  .timer__value {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 117px;
+    height: 50px;
+    border-radius: 6px;
+    font-size: 17px;
+    color: $super-dark-gray;
+    margin: 0 4px;
+  }
+  .timer__toggle-button {
+    background-color: $white;
+    border-radius: 50%;
+
+    position: relative;
+    top: 9px;
+    &-paused {
+      background-color: $white;
+      padding-left: 4px;
+    }
+  }
+
+  .timer__delete-button {
+    background-color: $white;
+    border-radius: 6px;
+
+    position: relative;
+    top: 9px;
+    left: 7px;
+  }
+}
+@media screen and (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
+  .timer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: auto;
+    gap: 20px;
+    margin: auto;
+    & button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      height: 50px;
+      border: none;
+    }
+    &__title {
+      font-size: 20px;
+      font-weight: 800;
+      color: $super-dark-gray;
+      width: 130px;
+      text-wrap: nowrap;
+      overflow-x: hidden;
+      text-overflow: ellipsis;
+      cursor: pointer;
+    }
+    &__value {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 117px;
+      height: 50px;
+      border-radius: 6px;
+      font-size: 17px;
+      color: $super-dark-gray;
+      margin: 0 4px;
+    }
+    &__toggle-button {
+      background-color: $white;
+      border-radius: 50%;
+
+      position: relative;
+      top: 9px;
+      &-paused {
+        background-color: $white;
+        padding-left: 4px;
+      }
+    }
+    &__delete-button {
+      background-color: $white;
+      border-radius: 6px;
+
+      position: relative;
+      top: 9px;
+      left: 7px;
+    }
+  }
+}
+@media screen and (min-width: $breakpoint-xl) {
+  .timer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: auto;
+    gap: 20px;
+    width: 466px;
+    height: 50px;
+
+    & button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      height: 50px;
+      border: none;
+    }
+    &__title {
+      font-size: 20px;
+      font-weight: 800;
+      color: $super-dark-gray;
+      width: 130px;
+      text-wrap: nowrap;
+      overflow-x: hidden;
+      text-overflow: ellipsis;
+      cursor: pointer;
+    }
+
+    &__value {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 117px;
+      height: 50px;
+      border-radius: 6px;
+      font-size: 17px;
+      color: $super-dark-gray;
+    }
+    &__toggle-button {
+      background-color: $white;
+      border-radius: 50%;
+      position: relative;
+      top: 9px;
+      &-paused {
+        background-color: $white;
+        padding-left: 4px;
+      }
+    }
+    &__delete-button {
+      background-color: $white;
+      border-radius: 6px;
+
+      position: relative;
+      top: 9px;
+      left: 7px;
+    }
+  }
+}

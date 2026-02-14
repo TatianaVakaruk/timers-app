@@ -1,0 +1,139 @@
+@import './../../styles/breakpoints.scss';
+@import './../../styles/variables';
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  font-family: $font-stack;
+  color: $white;
+}
+@media (max-width: $breakpoint-md) {
+  .timers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    min-height: 840px;
+    padding: 80px 16px 113px;
+    &__title {
+      min-width: 100%;
+      text-align: center;
+      font-size: 35px;
+      font-weight: 300;
+      letter-spacing: 1px;
+      color: $dark;
+    }
+    &__description {
+      max-width: 570px;
+      text-align: center;
+      font-size: 16px;
+      line-height: 30px;
+      color: $super-dark-gray;
+    }
+    &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      width: 100%;
+      border-radius: 12px;
+      background-color: $white;
+      padding: 40px 0 39px;
+      margin-top: 42px;
+    }
+    &__list {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+  }
+}
+@media screen and (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
+  .timers {
+    padding: 100px 0 113px;
+    min-height: 721px;
+    &__title {
+      min-width: 100%;
+      text-align: center;
+      font-size: 35px;
+      font-weight: 300;
+      letter-spacing: 1.5px;
+      color: $dark;
+      margin: 0 0 26px;
+      position: relative;
+      top: 5px;
+    }
+    &__description {
+      max-width: 570px;
+      text-align: center;
+      font-size: 16px;
+      line-height: 30px;
+      color: $super-dark-gray;
+      margin: auto;
+      text-align: center;
+    }
+    &__content {
+      width: 770px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      border-radius: 12px;
+      background-color: $white;
+      padding: 40px 0 5px;
+      margin: auto;
+      margin-top: 60px;
+    }
+    &__list {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+  }
+}
+@media screen and (min-width: $breakpoint-xl) {
+  .timers {
+    padding: 250px 0 113px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    min-height: 840px;
+    &__title {
+      text-align: center;
+      font-size: 35px;
+      font-weight: 300;
+      letter-spacing: 1px;
+      color: $dark;
+    }
+    &__description {
+      max-width: 570px;
+      text-align: center;
+      font-size: 16px;
+      line-height: 30px;
+      color: $super-dark-gray;
+    }
+    &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      width: 770px;
+      border-radius: 12px;
+      background-color: $white;
+      padding: 40px 0 39px;
+      margin-top: 42px;
+    }
+    .timers__list {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+  }
+}

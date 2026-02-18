@@ -22,11 +22,13 @@ body {
     min-height: 100vh;
     background-color: $dark-white;
     margin: 0 auto;
+    width: 100vw;
   }
   .first__section {
     background: url('../../../img/background.png');
     margin: 0;
     padding: 0;
+    background-size: cover;
   }
   .header {
     position: absolute;
@@ -94,15 +96,18 @@ body {
       Nunito Sans,
       sans-serif;
     background: linear-gradient(163deg, $orange, $yellow);
+    cursor: pointer;
 
     &_white {
       background: $dark-white;
       color: $dark;
+      cursor: pointer;
     }
     &_white1 {
       background: $dark-white;
       color: $dark;
       min-width: 144px;
+      cursor: pointer;
     }
   }
 
@@ -115,6 +120,7 @@ body {
     background: url('../../../img/background.png');
     margin: 0;
     padding: 0;
+    background-size: cover;
   }
   .page {
     position: relative;
@@ -123,6 +129,7 @@ body {
     min-height: 100vh;
     background-color: $dark-white;
     margin: auto;
+    width: 100vw;
   }
   .header {
     position: absolute;
@@ -167,6 +174,7 @@ body {
       height: 40px;
       font-size: 14px;
       text-transform: uppercase;
+      cursor: pointer;
     }
   }
   nav {
@@ -188,14 +196,17 @@ body {
     border-radius: 6px;
     border: none;
     font-family: $font-stack;
+    cursor: pointer;
     &_white {
       background: $dark-white;
       color: $dark;
+      cursor: pointer;
     }
     &_white1 {
       background: $dark-white;
       color: $dark;
       min-width: 144px;
+      cursor: pointer;
     }
   }
   section {
@@ -210,6 +221,7 @@ body {
     background: url('../../../img/background.png');
     margin: 0;
     padding: 0;
+    background-size: cover;
   }
   .page {
     position: relative;
@@ -219,22 +231,20 @@ body {
     background-color: $dark-white;
     margin: auto;
     min-height: 40px;
-    width: 1440px;
+    width: 100vw;
   }
   .header {
     position: absolute;
-    top: 25px;
+    top: 20px;
     left: 50%;
     transform: translate(-50%);
     z-index: 10;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
     min-height: 40px;
-    min-width: 1170px;
     padding: 0 135px;
-
-    padding: 0 16px;
 
     &__logo {
       font-size: 20px;
@@ -266,6 +276,7 @@ body {
       height: 40px;
       font-size: 14px;
       text-transform: uppercase;
+      cursor: pointer;
     }
   }
   nav {
@@ -287,14 +298,17 @@ body {
     border-radius: 6px;
     border: none;
     font-family: $font-stack;
+    cursor: pointer;
     &_white {
       background: $dark-white;
       color: $dark;
+      cursor: pointer;
     }
     &_white1 {
       background: $dark-white;
       color: $dark;
       min-width: 144px;
+      cursor: pointer;
     }
   }
   section {

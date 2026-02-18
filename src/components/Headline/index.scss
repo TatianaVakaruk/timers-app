@@ -57,6 +57,7 @@ body {
         Nunito Sans,
         sans-serif;
       background: linear-gradient(163deg, $orange, $yellow);
+      cursor: pointer;
     }
   }
 
@@ -137,6 +138,7 @@ body {
       border: none;
       font-family: $font-stack;
       background: linear-gradient(163deg, $orange, $yellow);
+      cursor: pointer;
     }
   }
   .content {
@@ -168,7 +170,7 @@ body {
     display: flex;
     justify-content: center;
     background-size: cover;
-    width: 1440px;
+    width: 100vw;
     height: 720px;
 
     &__description {
@@ -214,6 +216,7 @@ body {
       border: none;
       font-family: $font-stack;
       background: linear-gradient(163deg, $orange, $yellow);
+      cursor: pointer;
     }
   }
   .content {

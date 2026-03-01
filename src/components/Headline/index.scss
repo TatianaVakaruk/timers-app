@@ -170,38 +170,53 @@ body {
     display: flex;
     justify-content: center;
     background-size: cover;
-    width: 100vw;
-    height: 720px;
+    width: 1760px;
+    min-height: 900px;
 
     &__description {
-      max-width: 555px;
+      max-width: 700px;
       height: 310px;
       position: relative;
-      top: 230px;
-      left: 135px;
+      top: 299px;
+      left: 229px;
       text-align: left;
 
       &_visible {
         display: inline;
         position: absolute;
-        top: 137px;
-        right: 175px;
+        top: 265px;
+        right: 190px;
+        scale: 125%;
+        border-radius: 60px;
+        border-style: solid;
+        border-color: $white;
+        border-width: 60px 13px;
       }
     }
-
+    &__logo {
+      scale: 125%;
+      border-radius: 20px;
+    }
     &__title {
-      font-size: 35px;
+      font-size: 45px;
       font-weight: 300;
       line-height: 50px;
       letter-spacing: 1px;
       color: $white;
-      margin: 10px 0 36px;
+      margin: 10px 0 90px;
+      position: relative;
+      top: 24px;
+      right: 12px;
       text-align: left;
     }
     &__buttons {
       display: flex;
       gap: 20px;
       justify-content: left;
+      scale: 126%;
+      margin-left: 70px;
+      position: relative;
+      bottom: 10px;
     }
 
     &__button {
@@ -219,6 +234,17 @@ body {
       cursor: pointer;
     }
   }
+  .white__space {
+    white-space: pre-wrap;
+    font-weight: 250;
+    //position: relative;
+    //top: 2px;
+  }
+  .second-line {
+    display: inline-block;
+    margin-top: 13px;
+    font-weight: 220;
+  }
   .content {
     position: relative;
     width: 100%;
@@ -230,7 +256,7 @@ body {
     overflow: clip;
     background-color: $white;
     padding: 5px;
-    border-radius: 20px;
+
     margin-bottom: 20px;
     margin-right: 12px;
   }

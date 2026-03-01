@@ -1,7 +1,9 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const webpack = require('webpack');
+const path = require('path');
 
 module.exports = (env, argv) => {
   const isProduction = argv.mode === 'production';
@@ -10,6 +12,7 @@ module.exports = (env, argv) => {
     output: {
       filename: 'bundle.js',
       publicPath: '/',
+      path: path.resolve(__dirname, 'dist'),
     },
     module: {
       rules: [
@@ -19,14 +22,12 @@ module.exports = (env, argv) => {
           use: ['babel-loader'],
         },
         {
-        test: /\.(png|jpe?g|gif|svg)$/i, // Регулярное выражение для поиска файлов
-        type: 'asset/resource', // Asset Module (resource) - помещает файл в бандл
-        // Или 'asset/inline' - встраивает как base64
-        // Или 'asset' - автоматически выбирает между inline/resource
-        generator: {
-          filename: 'img/[name].[hash:8][ext]', // Куда сохранять в финальной сборке
+          test: /\.(png|jpe?g|gif|svg)$/i,
+          type: 'asset/resource',
+          generator: {
+            filename: 'img/[name].[hash:8][ext]',
+          },
         },
-      },
         {
           test: /.s?css$/,
           use: [
@@ -39,16 +40,24 @@ module.exports = (env, argv) => {
     },
     resolve: {
       extensions: ['.js', '.jsx'],
-       
     },
     plugins: [
       new webpack.ProgressPlugin(),
       new CleanWebpackPlugin(),
-      new HtmlWebpackPlugin({
-        template: './src/index.html',
+      new HtmlWebpackPlugin({ template: './src/index.html' }),
+      new CopyWebpackPlugin({
+        patterns: [
+          { from: path.resolve(__dirname, 'img'), to: 'img' }, // скопіює всю папку img
+        ],
       }),
     ],
     devServer: {
+      static: [
+        {
+          directory: path.resolve(__dirname, 'img'),
+          publicPath: '/img',
+        },
+      ],
       historyApiFallback: true,
       open: true,
       hot: true,

@@ -15,7 +15,7 @@ const Timers = () => {
     <section className="timers">
       <h2 className="timers__title">
         <span className="bold">Why </span>
-        do we do it?
+        do we use it?
       </h2>
       <p className="timers__description">
         This sounded nonsense to Alice, so she said nothing, but set off at once toward the Red

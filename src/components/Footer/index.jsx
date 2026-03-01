@@ -15,7 +15,7 @@ const Footer = () => {
             <img src={love} alt="love" />
             <span className="move__span">
               by
-              <span className="bold"> Sergey Azovskiy</span>
+              <span className="bold__footer"> Sergey Azovskiy</span>
             </span>
           </span>
           <span className="move__app"> © Timers App, 2025</span>

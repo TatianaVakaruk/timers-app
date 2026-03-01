@@ -171,20 +171,28 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-height: 110px;
+    height: 110px;
     border-top: 1px solid $light-gray;
     background-color: $white;
+    scale: 125%;
+
     &__content {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
       padding: 0 16px;
       vertical-align: middle;
+      height: 110px;
+      width: 1760px;
+      position: relative;
+      bottom: 4px;
     }
     &__logo {
       font-size: 20px;
       font-weight: 800;
       color: $dark;
+      position: relative;
+      right: 347px;
     }
     &__terms {
       display: flex;
@@ -193,6 +201,7 @@ body {
       gap: 10px;
       min-width: 186px;
       margin-left: 8px;
+      margin-top: 3px;
       & > span {
         font-size: 11px;
         color: $dark-gray;
@@ -205,7 +214,6 @@ body {
         margin-bottom: -2px;
         position: relative;
         top: 5px;
-        right: 5px;
       }
     }
     &__social-icons {
@@ -214,7 +222,9 @@ body {
       border-radius: 6px;
       list-style: none;
       overflow: hidden;
-      margin-right: -1px;
+      margin-left: 0px;
+      position: relative;
+      left: 350px;
 
       & a {
         display: flex;
@@ -246,18 +256,25 @@ body {
   }
   .move__span {
     position: relative;
-    right: 20px;
+    right: 16px;
   }
   .move__shift {
     position: relative;
-    left: 3px;
+    left: 1px;
   }
   .move__app {
     position: relative;
-    left: 50px;
+    left: 48px;
     text-align: center;
+    margin-bottom: 4px;
+    margin-right: 5px;
   }
   div {
     line-height: 1.5;
+  }
+  .bold__footer {
+    font-weight: bold;
+    position: relative;
+    left: 3px;
   }
 }

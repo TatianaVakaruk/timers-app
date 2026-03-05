@@ -191,15 +191,17 @@ body {
       position: relative;
       margin-top: 70px;
       left: 55px;
+      cursor: pointer;
       &-paused {
         background-color: $white;
         padding-left: 4px;
+        cursor: pointer;
       }
     }
     &__delete-button {
       background-color: $white;
       border-radius: 6px;
-
+      cursor: pointer;
       position: relative;
       margin-top: 70px;
       left: 50px;

@@ -169,12 +169,15 @@ body {
 @media screen and (min-width: $breakpoint-xl) {
   .footer {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    height: 110px;
+    height: 105px;
     border-top: 1px solid $light-gray;
     background-color: $white;
-    scale: 125%;
+    width: 1440px;
+    margin-left: 470px;
+    position: relative;
+    top: 105px;
 
     &__content {
       display: flex;
@@ -183,7 +186,7 @@ body {
       padding: 0 16px;
       vertical-align: middle;
       height: 110px;
-      width: 1760px;
+      width: 1440px;
       position: relative;
       bottom: 4px;
     }

@@ -170,23 +170,22 @@ body {
     display: flex;
     justify-content: center;
     background-size: cover;
-    width: 1760px;
-    min-height: 900px;
+    width: 1440px;
+    min-height: 720px;
 
     &__description {
       max-width: 700px;
       height: 310px;
       position: relative;
-      top: 299px;
-      left: 229px;
+      top: 230px;
+      left: 608px;
       text-align: left;
 
       &_visible {
         display: inline;
         position: absolute;
-        top: 265px;
-        right: 190px;
-        scale: 125%;
+        top: 140px;
+        margin-left: 1257px;
         border-radius: 60px;
         border-style: solid;
         border-color: $white;
@@ -194,29 +193,28 @@ body {
       }
     }
     &__logo {
-      scale: 125%;
       border-radius: 20px;
+      border-right: 2px solid $white;
+      border-left: 2px solid $white;
     }
     &__title {
-      font-size: 45px;
+      font-size: 33px;
       font-weight: 300;
-      line-height: 50px;
-      letter-spacing: 1px;
+      line-height: 38px;
+      letter-spacing: 2px;
       color: $white;
       margin: 10px 0 90px;
       position: relative;
-      top: 24px;
-      right: 12px;
+      top: 2px;
+      left: 1px;
       text-align: left;
     }
     &__buttons {
       display: flex;
       gap: 20px;
       justify-content: left;
-      scale: 126%;
-      margin-left: 70px;
       position: relative;
-      bottom: 10px;
+      bottom: 45px;
     }
 
     &__button {
@@ -237,6 +235,7 @@ body {
   .white__space {
     white-space: pre-wrap;
     font-weight: 250;
+    letter-spacing: 2.1px;
     //position: relative;
     //top: 2px;
   }
@@ -244,6 +243,9 @@ body {
     display: inline-block;
     margin-top: 13px;
     font-weight: 220;
+    letter-spacing: 2.1px;
+    position: relative;
+    right: 2px;
   }
   .content {
     position: relative;
@@ -262,6 +264,7 @@ body {
   }
   .bold {
     font-weight: bold;
+    letter-spacing: 2.1px;
   }
   .second__section {
     background-color: $dark-white;

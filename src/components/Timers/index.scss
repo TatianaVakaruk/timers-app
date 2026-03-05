@@ -104,8 +104,7 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 18px;
-    min-height: 1046px;
-    scale: 125%;
+    min-height: 846px;
 
     &__title {
       text-align: center;
@@ -114,8 +113,8 @@ body {
       letter-spacing: 1px;
       color: $dark;
       position: relative;
-      top: 86px;
       right: 8px;
+      bottom: 4px;
     }
     &__description {
       max-width: 570px;
@@ -124,7 +123,7 @@ body {
       line-height: 30px;
       color: $super-dark-gray;
       position: relative;
-      top: 84px;
+      bottom: 5px;
       right: 8px;
     }
     &__content {
@@ -135,15 +134,16 @@ body {
       width: 770px;
       border-radius: 12px;
       background-color: $white;
-      padding: 40px 0 39px;
+      padding: 40px 0 0;
       margin-top: 125px;
+      position: relative;
+      bottom: 90px;
     }
     .timers__list {
       display: flex;
       flex-direction: column;
       gap: 40px;
       position: relative;
-      bottom: 18px;
       right: 19px;
     }
   }

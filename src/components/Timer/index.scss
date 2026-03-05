@@ -155,6 +155,8 @@ body {
       width: 50px;
       height: 50px;
       border: none;
+      position: relative;
+      bottom: 40px;
     }
     &__title {
       font-size: 20px;
@@ -165,26 +167,30 @@ body {
       overflow-x: hidden;
       text-overflow: ellipsis;
       cursor: pointer;
+      position: relative;
+      right: 10px;
+      bottom: 14px;
     }
 
     &__value {
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 117px;
+      width: 115px;
       height: 50px;
       border-radius: 6px;
       font-size: 17px;
       color: $super-dark-gray;
       position: relative;
-      left: 35px;
+      left: 30px;
+      bottom: 14px;
     }
     &__toggle-button {
       background-color: $white;
       border-radius: 50%;
       position: relative;
-      top: 9px;
-      left: 64px;
+      margin-top: 70px;
+      left: 55px;
       &-paused {
         background-color: $white;
         padding-left: 4px;
@@ -195,8 +201,8 @@ body {
       border-radius: 6px;
 
       position: relative;
-      top: 9px;
-      left: 60px;
+      margin-top: 70px;
+      left: 50px;
     }
   }
 }

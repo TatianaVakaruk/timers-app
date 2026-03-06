@@ -174,8 +174,8 @@ body {
     height: 105px;
     border-top: 1px solid $light-gray;
     background-color: $white;
-    width: 1440px;
-    margin-left: 232px;
+    min-width: 1440px;
+    margin-right: 15px;
     position: relative;
     top: 105px;
 

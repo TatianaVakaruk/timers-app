@@ -166,12 +166,13 @@ body {
 }
 @media screen and (min-width: $breakpoint-xl) {
   .headline {
-    position: relative;
     display: flex;
     justify-content: center;
+
     background-size: cover;
-    width: 1440px;
+    width: 100%;
     min-height: 720px;
+    min-width: 1440px;
 
     &__description {
       max-width: 700px;
@@ -180,6 +181,7 @@ body {
       top: 230px;
       left: 368px;
       text-align: left;
+      flex: 1;
 
       &_visible {
         display: inline;
@@ -190,6 +192,9 @@ body {
         border-style: solid;
         border-color: $white;
         border-width: 60px 13px;
+        flex: 1;
+
+        height: auto;
       }
     }
     &__logo {
@@ -204,17 +209,18 @@ body {
       letter-spacing: 2px;
       color: $white;
       margin: 10px 0 90px;
-      position: relative;
-      top: 2px;
-      left: 1px;
+      //position: relative;
+      margin-top: 2px;
+      margin-left: 2px;
       text-align: left;
+      min-width: 555px;
     }
     &__buttons {
       display: flex;
       gap: 20px;
       justify-content: left;
       position: relative;
-      bottom: 45px;
+      bottom: 40px;
     }
 
     &__button {
@@ -236,8 +242,8 @@ body {
     white-space: pre-wrap;
     font-weight: 250;
     letter-spacing: 2.1px;
-    //position: relative;
-    //top: 2px;
+    position: relative;
+    top: 10px;
   }
   .second-line {
     display: inline-block;
@@ -253,6 +259,7 @@ body {
     margin: 0 auto;
     text-align: left;
   }
+
   img {
     overflow-clip-margin: content-box;
     overflow: clip;
@@ -265,6 +272,8 @@ body {
   .bold {
     font-weight: bold;
     letter-spacing: 2.1px;
+    position: relative;
+    top: 10px;
   }
   .second__section {
     background-color: $dark-white;

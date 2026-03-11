@@ -171,13 +171,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 105px;
+
     border-top: 1px solid $light-gray;
     background-color: $white;
     min-width: 1440px;
     margin-right: 15px;
-    position: relative;
-    top: 105px;
+    //position: relative;
+    //bottom: 70px;
+    height: 105px; /* фиксированная высота футера */
+    flex-shrink: 1;
 
     &__content {
       display: flex;
@@ -195,7 +197,7 @@ body {
       font-weight: 800;
       color: $dark;
       position: relative;
-      right: 347px;
+      right: 349px;
       cursor: pointer;
     }
     &__terms {
@@ -204,7 +206,7 @@ body {
       align-items: center;
       gap: 10px;
       min-width: 186px;
-      margin-left: 8px;
+      margin-left: 6px;
       margin-top: 3px;
       & > span {
         font-size: 11px;
@@ -217,7 +219,7 @@ body {
       & img {
         margin-bottom: -2px;
         position: relative;
-        top: 5px;
+        top: 7px;
       }
     }
     &__social-icons {
@@ -260,18 +262,20 @@ body {
   }
   .move__span {
     position: relative;
-    right: 16px;
+    right: 14px;
+    top: 2px;
   }
   .move__shift {
     position: relative;
     left: 1px;
+    top: 2px;
   }
   .move__app {
     position: relative;
     left: 48px;
     text-align: center;
     margin-bottom: 4px;
-    margin-right: 5px;
+    margin-right: 7px;
   }
   div {
     line-height: 1.5;
@@ -279,6 +283,6 @@ body {
   .bold__footer {
     font-weight: bold;
     position: relative;
-    left: 3px;
+    left: 2px;
   }
 }

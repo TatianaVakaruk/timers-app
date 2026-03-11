@@ -10,10 +10,8 @@ const Headline = () => {
           <img className="headline__logo" src={logo} alt="logo" />
           <h2 className="headline__title">
             <span className="bold">Timers App.</span>
-            <span className="white__space">
-              {' '}
-              Best landing page <span class="second-line">for web and mobile apps</span>
-            </span>
+            <span className="white__space"> Best landing page</span>
+            <span className="second-line">for web and mobile apps</span>
           </h2>
           <div className="headline__buttons">
             <button className="headline__button">Download Now</button>

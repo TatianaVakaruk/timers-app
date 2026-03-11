@@ -12,6 +12,7 @@ html {
 body {
   font-family: $font-stack;
   color: $white;
+  overflow-x: hidden;
 }
 @media (max-width: $breakpoint-md) {
   .headline {
@@ -170,7 +171,7 @@ body {
     justify-content: center;
 
     background-size: cover;
-    width: 100%;
+
     min-height: 720px;
     min-width: 1440px;
 
@@ -187,7 +188,7 @@ body {
         display: inline;
         position: absolute;
         top: 140px;
-        margin-left: 1020px;
+        right: 420px;
         border-radius: 60px;
         border-style: solid;
         border-color: $white;
@@ -236,6 +237,8 @@ body {
       font-family: $font-stack;
       background: linear-gradient(163deg, $orange, $yellow);
       cursor: pointer;
+      position: relative;
+      top: 3px;
     }
   }
   .white__space {
@@ -243,19 +246,21 @@ body {
     font-weight: 250;
     letter-spacing: 2.1px;
     position: relative;
-    top: 10px;
+    top: 12px;
+    right: 2px;
   }
   .second-line {
     display: inline-block;
     margin-top: 13px;
     font-weight: 220;
-    letter-spacing: 2.1px;
+    letter-spacing: 2.2px;
     position: relative;
     right: 2px;
+    top: 10px;
   }
   .content {
     position: relative;
-    width: 100%;
+    width: 1140px;
     margin: 0 auto;
     text-align: left;
   }
@@ -264,20 +269,25 @@ body {
     overflow-clip-margin: content-box;
     overflow: clip;
     background-color: $white;
-    padding: 5px;
+    padding: 5px 3.5px;
 
     margin-bottom: 20px;
     margin-right: 12px;
   }
   .bold {
     font-weight: bold;
-    letter-spacing: 2.1px;
+    letter-spacing: 2.3px;
     position: relative;
-    top: 10px;
+    top: 12px;
   }
   .second__section {
     background-color: $dark-white;
     margin: 0;
     padding: 0;
+    //display: flex;
+    //justify-content: center;
+    //margin-bottom: 20px;
+    //min-height: 100vh;
+    // flex: 1;
   }
 }

@@ -12,6 +12,7 @@ html {
 body {
   font-family: $font-stack;
   color: $white;
+  overflow-x: hidden;
 }
 @media (max-width: $breakpoint-md) {
   .timer {
@@ -35,7 +36,7 @@ body {
   .timer__title {
     font-size: 20px;
     font-weight: 800;
-    color: $super-dark-gray;
+    color: $blue;
     width: 100px;
     height: 50px;
     text-wrap: nowrap;
@@ -161,14 +162,14 @@ body {
     &__title {
       font-size: 20px;
       font-weight: 800;
-      color: $super-dark-gray;
+      color: $blue;
       width: 130px;
       text-wrap: nowrap;
       overflow-x: hidden;
       text-overflow: ellipsis;
       cursor: pointer;
       position: relative;
-      right: 10px;
+      right: 8px;
       bottom: 14px;
     }
 

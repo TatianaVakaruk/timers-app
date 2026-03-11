@@ -12,6 +12,7 @@ html {
 body {
   font-family: $font-stack;
   color: $white;
+  overflow-x: hidden;
 }
 @media (max-width: $breakpoint-md) {
   .timers__form {

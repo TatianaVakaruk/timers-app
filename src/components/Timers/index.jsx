@@ -14,7 +14,7 @@ const Timers = () => {
   return (
     <section className="timers">
       <h2 className="timers__title">
-        <span className="bold">Why </span>
+        <span className="timers__bold">Why </span>
         do we use it?
       </h2>
       <p className="timers__description">

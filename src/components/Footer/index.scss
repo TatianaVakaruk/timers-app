@@ -174,11 +174,11 @@ body {
     height: 105px;
     border-top: 1px solid $light-gray;
     background-color: $white;
-    width: 1440px;
+    min-width: 100%;
     margin-left: 470px;
     position: relative;
-    bottom: 75px;
-    right: 240px;
+    bottom: 76px;
+    right: 480px;
 
     &__content {
       display: flex;
@@ -280,6 +280,6 @@ body {
   .bold__footer {
     font-weight: bold;
     position: relative;
-    left: 5px;
+    left: 3px;
   }
 }

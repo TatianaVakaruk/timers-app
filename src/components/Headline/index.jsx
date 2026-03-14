@@ -5,7 +5,7 @@ import photo from '../../../img/picture.png';
 const Headline = () => {
   return (
     <section className="headline">
-      <div className="headline__content content">
+      <div className="headline__content">
         <div className="headline__description">
           <img className="headline__logo" src={logo} alt="logo" />
           <h2 className="headline__title">

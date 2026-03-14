@@ -174,13 +174,18 @@ body {
 
     min-height: 720px;
     min-width: 1440px;
-
+    &__content {
+      position: relative;
+      width: 1140px;
+      margin: 0 auto;
+      text-align: left;
+    }
     &__description {
       max-width: 700px;
       height: 310px;
       position: relative;
       top: 230px;
-      left: 368px;
+      right: 20px;
       text-align: left;
       flex: 1;
 
@@ -188,11 +193,11 @@ body {
         display: inline;
         position: absolute;
         top: 140px;
-        right: 420px;
+        right: 30px;
         border-radius: 60px;
         border-style: solid;
         border-color: $white;
-        border-width: 60px 13px;
+        border-width: 60px 14px;
         flex: 1;
 
         height: auto;
@@ -244,7 +249,7 @@ body {
   .white__space {
     white-space: pre-wrap;
     font-weight: 250;
-    letter-spacing: 2.1px;
+    letter-spacing: 2px;
     position: relative;
     top: 12px;
     right: 2px;
@@ -253,16 +258,10 @@ body {
     display: inline-block;
     margin-top: 13px;
     font-weight: 220;
-    letter-spacing: 2.2px;
+    letter-spacing: 2.1px;
     position: relative;
-    right: 2px;
+    right: 3px;
     top: 10px;
-  }
-  .content {
-    position: relative;
-    width: 1140px;
-    margin: 0 auto;
-    text-align: left;
   }
 
   img {
@@ -279,6 +278,7 @@ body {
     letter-spacing: 2.3px;
     position: relative;
     top: 12px;
+    right: 2px;
   }
   .second__section {
     background-color: $dark-white;

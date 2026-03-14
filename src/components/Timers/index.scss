@@ -115,7 +115,7 @@ body {
       color: $dark;
       position: relative;
       right: 6px;
-      bottom: 4px;
+      bottom: 2px;
     }
     &__description {
       max-width: 570px;
@@ -124,8 +124,8 @@ body {
       line-height: 30px;
       color: $super-dark-gray;
       position: relative;
-      bottom: 5px;
-      right: 8px;
+      bottom: 6px;
+      right: 7px;
     }
     &__content {
       display: flex;
@@ -140,12 +140,15 @@ body {
       position: relative;
       bottom: 90px;
     }
-    .timers__list {
-      display: flex;
-      flex-direction: column;
-      gap: 40px;
-      position: relative;
-      right: 19px;
+    &__bold {
+      font-weight: 800;
     }
+  }
+  .timers__list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    position: relative;
+    right: 19px;
   }
 }

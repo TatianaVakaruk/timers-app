@@ -187,7 +187,7 @@ body {
       padding: 0 16px;
       vertical-align: middle;
       height: 110px;
-      width: 1440px;
+      width: 100%;
       position: relative;
       bottom: 4px;
     }
@@ -219,6 +219,7 @@ body {
         margin-bottom: -2px;
         position: relative;
         top: 5px;
+        left: 3px;
       }
     }
     &__social-icons {
@@ -248,10 +249,7 @@ body {
       unicode-bidi: isolate;
     }
     .image__border {
-      width: 25px;
-      height: 25px;
-      margin-right: 5px;
-      margin-top: 18px;
+      margin: 0;
     }
   }
   .content {
@@ -261,7 +259,7 @@ body {
   }
   .move__span {
     position: relative;
-    right: 16px;
+    right: 12px;
   }
   .move__shift {
     position: relative;
@@ -281,5 +279,6 @@ body {
     font-weight: bold;
     position: relative;
     left: 3px;
+    top: 1px;
   }
 }

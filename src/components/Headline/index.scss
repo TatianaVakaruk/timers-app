@@ -192,12 +192,13 @@ body {
       &_visible {
         display: inline;
         position: absolute;
-        top: 140px;
-        right: 30px;
+        top: 130px;
+        right: 20px;
         border-radius: 60px;
-        border-style: solid;
-        border-color: $white;
-        border-width: 60px 14px;
+        background: none;
+        //border-style: solid;
+        // border-color: $white;
+        //border-width: 0px;
         flex: 1;
 
         height: auto;

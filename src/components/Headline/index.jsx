@@ -18,7 +18,11 @@ const Headline = () => {
             <button className="button button_white1">Watch Video</button>
           </div>
         </div>
-        <img className="headline__description_visible " src={photo} alt="decoration" />
+        <img
+          className="headline__description_visible "
+          src="https://timers-app-two.vercel.app/images/headline/decoration.png"
+          alt="decoration"
+        />
       </div>
     </section>
   );

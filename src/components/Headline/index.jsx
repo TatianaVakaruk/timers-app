@@ -1,7 +1,6 @@
 import React from 'react';
 import logo from '../../../img/logo.png';
-import photo from '../../../img/picture.png';
-
+import './index.scss';
 const Headline = () => {
   return (
     <section className="headline">
@@ -10,7 +9,7 @@ const Headline = () => {
           <img className="headline__logo" src={logo} alt="logo" />
           <h2 className="headline__title">
             <span className="bold">Timers App.</span>
-            <span className="white__space"> Best landing page</span>
+            <span className="first-line"> Best landing page</span>
             <span className="second-line">for web and mobile apps</span>
           </h2>
           <div className="headline__buttons">

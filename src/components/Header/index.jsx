@@ -1,4 +1,5 @@
 import React from 'react';
+import './index.scss';
 
 const Header = () => {
   return (
@@ -27,9 +28,7 @@ const Header = () => {
             </a>
           </li>
         </ul>
-        <button className="header__action-button button button_white">
-          Get it free
-        </button>
+        <button className="header__action-button button button_white">Get it free</button>
       </nav>
     </header>
   );

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import moment from 'moment';
+import './index.scss';
 const TimerForm = ({ setTimers }) => {
   const [inputValue, setInputValue] = useState('');
 

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import TimerForm from '../TimerForm/index.jsx';
 import Timer from '../Timer/index.jsx';
+import './index.scss';
 
 const Timers = () => {
   const [timers, setTimers] = useState([]);

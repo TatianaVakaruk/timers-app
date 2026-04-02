@@ -3,6 +3,7 @@ import love from '../../../img/heart.png';
 import twitter from '../../../img/twitter.png';
 import facebook from '../../../img/facebook.png';
 import instagram from '../../../img/instagram.png';
+import './index.scss';
 
 const Footer = () => {
   return (
@@ -11,14 +12,14 @@ const Footer = () => {
         <span className="footer__logo">Timers App</span>
         <div className="footer__terms">
           <span>
-            <span className="move__shift">Created with</span>
+            <span className="move-shift">Created with</span>
             <img src={love} alt="love" />
-            <span className="move__span">
+            <span className="move-span">
               by
-              <span className="bold__footer"> Sergey Azovskiy</span>
+              <span className="bold-footer"> Sergey Azovskiy</span>
             </span>
           </span>
-          <span className="move__app"> © Timers App, 2025</span>
+          <span className="move-app"> © Timers App, 2025</span>
         </div>
         <ul className="footer__social-icons">
           <li>

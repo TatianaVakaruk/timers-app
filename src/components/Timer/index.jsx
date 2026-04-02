@@ -1,8 +1,9 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import pause from '../../../img/pause.png';
 import del from '../../../img/delete.png';
 import run from '../../../img/run.png';
 import { setInterval } from 'core-js';
+import './index.scss';
 import moment from 'moment';
 
 const getOtherStoredTimers = id =>
@@ -11,7 +12,6 @@ const getOtherStoredTimers = id =>
 const Timer = ({ initialTimer, setTimers }) => {
   const [timer, setTimer] = useState(initialTimer);
   const { id, seconds, isRunning, lastUpdated } = timer;
-  console.log(seconds);
   useEffect(() => {
     let intervalId = null;
     const passedTime = moment().diff(moment(lastUpdated), 'seconds');

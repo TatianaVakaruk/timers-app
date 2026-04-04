@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import moment from 'moment';
 import './index.scss';
+
 const TimerForm = ({ setTimers }) => {
   const [inputValue, setInputValue] = useState('');
 
@@ -12,6 +13,7 @@ const TimerForm = ({ setTimers }) => {
       seconds: 0,
       isRunning: true,
     };
+
     setTimers(prevTimers => {
       localStorage.setItem('timers', JSON.stringify([...prevTimers, newTimer]));
       return [...prevTimers, newTimer];

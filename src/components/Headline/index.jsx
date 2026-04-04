@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from '../../../img/logo.png';
 import './index.scss';
+
 const Headline = () => {
   return (
     <section className="headline">

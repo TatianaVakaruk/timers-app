@@ -8,14 +8,16 @@
   gap: 18px;
   min-height: 840px;
   padding: 80px 16px 113px;
+  position: relative;
+  top: 3px;
 
   @include tablet {
     padding: 100px 0 113px;
     min-height: 721px;
   }
 
-  @include desctop {
-    padding: 250px 0 113px;
+  @include desktop {
+    padding: 250px 0 29px;
     min-height: 846px;
   }
 
@@ -35,10 +37,10 @@
       top: 5px;
     }
 
-    @include desctop {
+    @include desktop {
       position: relative;
       right: 6px;
-      bottom: 2px;
+      bottom: 5px;
     }
   }
 
@@ -53,9 +55,9 @@
       margin: auto;
     }
 
-    @include desctop {
+    @include desktop {
       position: relative;
-      bottom: 6px;
+      bottom: 8px;
       right: 7px;
     }
   }
@@ -78,7 +80,7 @@
       margin-top: 60px;
     }
 
-    @include desctop {
+    @include desktop {
       width: 770px;
       padding: 40px 0 0;
       margin-top: 125px;
@@ -92,13 +94,13 @@
     flex-direction: column;
     gap: 40px;
 
-    @include desctop {
+    @include desktop {
       position: relative;
       right: 19px;
     }
   }
 
-  @include desctop {
+  @include desktop {
     &__bold {
       font-weight: 800;
     }

@@ -15,10 +15,13 @@
     margin: auto;
   }
 
-  @include desctop {
+  @include desktop {
     gap: 20px;
     width: 466px;
     height: 50px;
+    position: relative;
+    bottom: 5px;
+    right: 2px;
   }
 
   button {
@@ -29,105 +32,108 @@
     height: 50px;
     border: none;
 
-    @include desctop {
+    @include desktop {
       position: relative;
       bottom: 90px;
     }
   }
-}
-.timer__title {
-  display: flex;
-  align-items: center;
-  font-size: 20px;
-  font-weight: 800;
-  color: $blue;
-  width: 100px;
-  height: 50px;
-  margin-right: 5px;
-  text-wrap: nowrap;
-  overflow-x: hidden;
-  text-overflow: ellipsis;
-  cursor: pointer;
 
-  @include tablet {
+  &__title {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 800;
+    color: $blue;
+    width: 100px;
+    height: 50px;
+    margin-right: 5px;
+    text-wrap: nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+
+    @include tablet {
+      color: $super-dark-gray;
+      width: 130px;
+    }
+
+    @include desktop {
+      position: relative;
+      right: 6px;
+      bottom: 14px;
+      width: 190px;
+    }
+  }
+
+  &__value {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 117px;
+    height: 50px;
+    border-radius: 6px;
+    font-size: 17px;
     color: $super-dark-gray;
-    width: 130px;
+    margin: 0 4px;
+
+    @include desktop {
+      width: 195px;
+      position: relative;
+      left: 37px;
+      bottom: 13px;
+    }
   }
 
-  @include desctop {
-    position: relative;
-    right: 6px;
-    bottom: 14px;
-    width: 130px;
-  }
-}
-.timer__value {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 117px;
-  height: 50px;
-  border-radius: 6px;
-  font-size: 17px;
-  color: $super-dark-gray;
-  margin: 0 4px;
-
-  @include desctop {
-    width: 130px;
-    position: relative;
-    left: 35px;
-    bottom: 15px;
-  }
-}
-.timer__toggle-button {
-  background-color: $white;
-  border-radius: 50%;
-  position: relative;
-  top: 9px;
-  left: 5px;
-  cursor: pointer;
-  margin: 0;
-  padding: 0;
-
-  @include tablet {
+  &__toggle-button {
+    background-color: $white;
+    border-radius: 50%;
     position: relative;
     top: 9px;
+    left: 5px;
+    cursor: pointer;
     margin: 0;
     padding: 0;
+
+    @include tablet {
+      position: relative;
+      top: 9px;
+      margin: 0;
+      padding: 0;
+    }
+
+    @include desktop {
+      position: relative;
+      bottom: 100px;
+      left: 59px;
+      margin-bottom: 30px;
+    }
+
+    &_paused {
+      background-color: $white;
+      padding-left: 4px;
+      cursor: pointer;
+    }
   }
 
-  @include desctop {
-    position: relative;
-    bottom: 100px;
-    left: 59px;
-    margin-bottom: 30px;
-  }
-
-  &_paused {
+  &__delete-button {
     background-color: $white;
-    padding-left: 4px;
-    cursor: pointer;
-  }
-}
-
-.timer__delete-button {
-  background-color: $white;
-  border-radius: 6px;
-  position: relative;
-  top: 9px;
-  left: 15px;
-  cursor: pointer;
-
-  @include tablet {
+    border-radius: 6px;
     position: relative;
     top: 9px;
-    left: 7px;
-  }
+    left: 15px;
+    cursor: pointer;
 
-  @include desctop {
-    position: relative;
-    left: 53px;
-    margin-bottom: 30px;
-    margin-right: 60px;
+    @include tablet {
+      position: relative;
+      top: 9px;
+      left: 7px;
+    }
+
+    @include desktop {
+      position: relative;
+      left: 53px;
+      margin-bottom: 30px;
+      margin-right: 60px;
+    }
   }
 }

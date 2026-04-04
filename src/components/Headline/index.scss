@@ -7,7 +7,7 @@
   justify-content: center;
   background-size: cover;
 
-  @include desctop {
+  @include desktop {
     min-height: 720px;
     min-width: 1440px;
   }
@@ -15,7 +15,7 @@
   &__content {
     padding: 140px 16px 100px;
 
-    @include desctop {
+    @include desktop {
       padding: 0;
       &__content {
         position: relative;
@@ -34,7 +34,7 @@
       margin: auto;
     }
 
-    @include desctop {
+    @include desktop {
       max-width: 700px;
       height: 310px;
       position: relative;
@@ -47,7 +47,7 @@
     &_visible {
       display: none;
 
-      @include desctop {
+      @include desktop {
         display: inline;
         position: absolute;
         top: 133px;
@@ -72,7 +72,7 @@
       text-align: center;
     }
 
-    @include desctop {
+    @include desktop {
       font-size: 33px;
       line-height: 38px;
       letter-spacing: 2px;
@@ -89,7 +89,7 @@
     justify-content: center;
     gap: 20px;
 
-    @include desctop {
+    @include desktop {
       justify-content: left;
       position: relative;
       bottom: 40px;
@@ -111,7 +111,7 @@
     background: linear-gradient(163deg, $orange, $yellow);
     cursor: pointer;
 
-    @include desctop {
+    @include desktop {
       position: relative;
       top: 3px;
     }
@@ -133,7 +133,7 @@ img {
   margin-bottom: 20px;
   margin-right: 12px;
 
-  @include desctop {
+  @include desktop {
     padding: 5px 3.5px;
     border-radius: 0px;
   }
@@ -142,14 +142,15 @@ img {
 .bold {
   font-weight: bold;
 
-  @include desctop {
+  @include desktop {
     letter-spacing: 2.3px;
     position: relative;
     top: 12px;
     right: 2px;
   }
 }
-@include desctop {
+
+@include desktop {
   .headline__logo {
     border-radius: 20px;
     border-right: 2px solid $white;
@@ -166,6 +167,7 @@ img {
     top: 12px;
     right: 2px;
   }
+
   .second-line {
     display: inline-block;
     margin-top: 13px;

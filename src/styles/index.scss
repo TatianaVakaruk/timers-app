@@ -34,10 +34,13 @@ body {
   background-color: $dark-white;
   margin: 0 auto;
   width: 100vw;
-  overflow-y: hidden;
 
   @include tablet {
     margin: auto;
+  }
+
+  @include desktop {
+    overflow-y: hidden;
   }
 }
 

@@ -4,7 +4,7 @@ import Headline from './components/Headline/index.jsx';
 import Timers from './components/Timers/index.jsx';
 import Footer from './components/Footer/index.jsx';
 
-function App() {
+const App = () => {
   return (
     <div className="page">
       <section className="first__section">
@@ -17,6 +17,6 @@ function App() {
       <Footer />
     </div>
   );
-}
+};
 
 export default App;

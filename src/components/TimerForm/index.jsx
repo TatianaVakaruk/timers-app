@@ -15,8 +15,8 @@ const TimerForm = ({ setTimers }) => {
     };
 
     setTimers(prevTimers => {
-      localStorage.setItem('timers', JSON.stringify([...prevTimers, newTimer]));
-      return [...prevTimers, newTimer];
+      localStorage.setItem('timers', JSON.stringify([newTimer, ...prevTimers]));
+      return [newTimer, ...prevTimers];
     });
     setInputValue('');
   };

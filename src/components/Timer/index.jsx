@@ -1,33 +1,25 @@
 import React, { useState, useEffect } from 'react';
+import moment from 'moment';
 import pause from '../../../img/pause.png';
 import del from '../../../img/delete.png';
 import run from '../../../img/run.png';
 import { setInterval } from 'core-js';
 import './index.scss';
-import moment from 'moment';
 
 const getOtherStoredTimers = id =>
   JSON.parse(localStorage.getItem('timers') || []).filter(timer => timer.id !== id);
-
 const Timer = ({ initialTimer, setTimers }) => {
   const [timer, setTimer] = useState(initialTimer);
   const { id, isRunning, lastUpdated } = timer;
-
   useEffect(() => {
     let intervalId = null;
     const passedTime = moment().diff(moment(lastUpdated), 'seconds');
     if (isRunning && passedTime) {
-      setTimer(prevState => ({
-        ...prevState,
-        seconds: prevState.seconds + passedTime,
-      }));
+      setTimer(prevState => ({ ...prevState, seconds: prevState.seconds + passedTime }));
     }
     if (isRunning) {
       intervalId = +setInterval(() => {
-        setTimer(prevState => ({
-          ...prevState,
-          seconds: prevState.seconds + 1,
-        }));
+        setTimer(prevState => ({ ...prevState, seconds: prevState.seconds + 1 }));
       }, 1000);
     }
     return () => {
@@ -36,36 +28,28 @@ const Timer = ({ initialTimer, setTimers }) => {
       }
     };
   }, [isRunning]);
-
   useEffect(() => {
     window.addEventListener('beforeunload', onUnload);
     return () => {
       window.removeEventListener('beforeunload', onUnload);
     };
   }, [timer]);
-
   const onUnload = () => {
     localStorage.setItem(
       'timers',
       JSON.stringify([
-        ...getOtherStoredTimers(id),
         { ...timer, lastUpdated: moment().toISOString() },
+        ...getOtherStoredTimers(id),
       ]),
     );
   };
-
   const onToggle = () => {
-    setTimer(prevTimer => ({
-      ...prevTimer,
-      isRunning: !isRunning,
-    }));
+    setTimer(prevTimer => ({ ...prevTimer, isRunning: !isRunning }));
   };
-
   const onDelete = () => {
     localStorage.setItem('timers', JSON.stringify(getOtherStoredTimers(id)));
     setTimers(getOtherStoredTimers(id));
   };
-
   const formatTime = s =>
     [s / 3600, (s % 3600) / 60, s % 60].map(v => String(Math.floor(v)).padStart(2, '0')).join(':');
 

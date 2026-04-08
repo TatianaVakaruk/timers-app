@@ -8,9 +8,11 @@ import './index.scss';
 
 const getOtherStoredTimers = id =>
   JSON.parse(localStorage.getItem('timers') || []).filter(timer => timer.id !== id);
+
 const Timer = ({ initialTimer, setTimers }) => {
   const [timer, setTimer] = useState(initialTimer);
   const { id, isRunning, lastUpdated } = timer;
+
   useEffect(() => {
     let intervalId = null;
     const passedTime = moment().diff(moment(lastUpdated), 'seconds');
@@ -28,12 +30,14 @@ const Timer = ({ initialTimer, setTimers }) => {
       }
     };
   }, [isRunning]);
+
   useEffect(() => {
     window.addEventListener('beforeunload', onUnload);
     return () => {
       window.removeEventListener('beforeunload', onUnload);
     };
   }, [timer]);
+
   const onUnload = () => {
     localStorage.setItem(
       'timers',
@@ -43,13 +47,16 @@ const Timer = ({ initialTimer, setTimers }) => {
       ]),
     );
   };
+
   const onToggle = () => {
     setTimer(prevTimer => ({ ...prevTimer, isRunning: !isRunning }));
   };
+
   const onDelete = () => {
     localStorage.setItem('timers', JSON.stringify(getOtherStoredTimers(id)));
     setTimers(getOtherStoredTimers(id));
   };
+
   const formatTime = s =>
     [s / 3600, (s % 3600) / 60, s % 60].map(v => String(Math.floor(v)).padStart(2, '0')).join(':');
 

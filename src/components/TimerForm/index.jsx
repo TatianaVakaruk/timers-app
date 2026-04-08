@@ -13,7 +13,6 @@ const TimerForm = ({ setTimers }) => {
       seconds: 0,
       isRunning: true,
     };
-
     setTimers(prevTimers => {
       localStorage.setItem('timers', JSON.stringify([newTimer, ...prevTimers]));
       return [newTimer, ...prevTimers];

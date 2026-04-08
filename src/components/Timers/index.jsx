@@ -8,7 +8,9 @@ const Timers = () => {
   useEffect(() => {
     const storedTimers = localStorage.getItem('timers');
     if (storedTimers) {
-      setTimers(JSON.parse(storedTimers));
+      const parsed = JSON.parse(storedTimers);
+      const sorted = parsed.sort((a, b) => b.id - a.id);
+      setTimers(sorted);
     }
   }, []);
 
